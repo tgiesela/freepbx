@@ -1,0 +1,12 @@
+[Unit]
+Description=Asterisk Container
+Requires=docker.service
+After=docker.service
+
+[Service]
+Restart=always
+ExecStart=docker start asterisk 
+ExecStop=docker stop -t 2 asterisk
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,7 @@
+create database asterisk; 
+create database asteriskcdrdb; 
+create user asterisk;
+GRANT ALL PRIVILEGES ON asterisk.* TO asterisk@'%' IDENTIFIED BY ''; 
+GRANT ALL PRIVILEGES ON asteriskcdrdb.* TO asterisk@'%' IDENTIFIED BY ''; 
+flush privileges;
+
